@@ -1,6 +1,6 @@
 # SMUblockchain- Project Web3 Kickstarter
 
-Overview: This  rpoject will be 
+Overview: This  project will be to create a kickstarter type of website using web3 and smart contracts.
 
 Some high level requirements:
 1. Seller should be able to update a photo and description (metadata of his project). 
