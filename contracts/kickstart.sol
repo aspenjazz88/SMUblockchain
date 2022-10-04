@@ -5,6 +5,7 @@ contract Kickstart {
     uint256 deadline;
     uint256 goal;
     mapping(address => uint256) public pledgeOf;
+    uint8 numberofpledgers;
 
 //this function, may be changed to constructor, can be run in the beginning
 //to activate the Kickstart campaign.  
@@ -40,5 +41,8 @@ contract Kickstart {
         pledgeOf[msg.sender] = 0;
         msg.sender.transfer(amount);
     }
-
+ //Add a function to return numberofpledgers
+    function totalpledgers() public view returns (uint8) {
+     return numberofpledgers;
+    }
 }
