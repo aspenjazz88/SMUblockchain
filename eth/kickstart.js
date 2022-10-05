@@ -1,12 +1,8 @@
-import web3 from './web3';
-import abi from './abi.json';
+import web3 from '../eth/web3';
+import abi from '../eth/abi.json';
 
-const kickstart = () => {
-  try {
-    return new web3.eth.Contract(abi, process.env.ADDRESS);
-  } catch (err) {
-    throw new Error(`Provide the deployed contract address first. ${err}`);
-  }
+const kickstart = (address) => {
+  return new web3.eth.Contract(abi, address);
 };
 
 export default kickstart;
